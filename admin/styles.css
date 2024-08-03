@@ -1,0 +1,101 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the body and header */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    width: 77px;
+    height: 100%;
+    background-color: #333;
+    align-items: center;
+    padding: 10px;
+    z-index: 3; /* Higher z-index to ensure it's above other elements */
+}
+/* Logo styles */
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+}
+/* Navigation link styles */
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-top: 3vh;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+/* Icon styles */
+.nav .fas {
+    font-size: 25px;
+    margin-right: 5px; 
+    margin-bottom: 1.5vh;/* Add space between icon and text */
+}
+ .nav-ul {
+    position: absolute;
+    left: 18px; /* Adjust the x-coordinate as needed */
+    top: 0px; /* Adjust the y-coordinate as needed */
+    height: 100%;
+}
+
+/* Style for the achievement section */
+.achievements {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.achievements ul {
+    list-style: none;
+}
+
+.achievements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.achievements img {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+.achievements h3 {
+    font-size: 18px;
+}
+
+.achievements p {
+    font-size: 14px;
+    color: #555;
+}

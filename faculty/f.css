@@ -1,0 +1,218 @@
+/* Reset some default styles */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+.nav {
+        display: flex;
+        flex-direction: column; /* Vertical layout */
+        position: absolute;
+        left: 0; 
+        top: 0; 
+        width: 77px;
+        height: 100%;
+        background-color: #333;
+        align-items: center;
+        padding: 10px;
+        
+        
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+}
+/* Navigation link styles */
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-top: 3vh;
+    font-size: 12px; /* Adjust the font size as needed */
+    
+    
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+/* Icon styles */
+.nav .fas {
+    font-size: 25px;
+    margin-right: 5px; 
+    margin-bottom: 1.5vh;/* Add space between icon and text */
+    
+    
+}
+ .nav-ul {
+    position: absolute;
+    left: 18px; /* Adjust the x-coordinate as needed */
+    top: 0px; /* Adjust the y-coordinate as needed */
+    height: 100%;
+    
+}
+
+.achievement-image {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+
+footer {    
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Ensure the footer sticks to the bottom */
+}
+
+/* test*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+
+.vertical-line {
+    margin-top: 60px;
+    width: 10vh;
+    background-color: #ccc;
+    height: 100;
+}
+
+/* Home page */
+.home-container {
+    margin-top: 100px;
+    margin: 20vh auto;
+    width: 80vh;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; 
+}
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .vertical-line {
+        display: block; /* Show on small screens */
+        width: 15vh; /* Adjust the width for small screens */
+    }
+    .home-container {
+        margin-top: 100px;
+        width: 75vh; /* Full width on small screens */
+    }
+}
+.content {
+    display: flex;
+    align-items: flex-start; /* Align content with the navbar */
+    margin-top: 20px; 
+}
+/* User list container */
+.user-list {
+    list-style: none;
+    padding: 0; /* Add a value here, e.g., padding: 10px; if needed */
+}
+
+/* User list items */
+.user-list li {
+    display: flex;
+    justify-content: space-between; /* This will push the button to the right */
+    align-items: center;
+    padding: 10px; /* Add padding here if needed */
+    border: 1px solid #ccc; /* Add a border or customize as needed */
+}
+
+/* User list buttons */
+.user-list button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select[multiple] {
+    height: 100px; /* Set a fixed height for multiple select */
+}
+
+ 

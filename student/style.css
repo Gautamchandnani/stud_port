@@ -1,0 +1,140 @@
+/* Apply CSS styles to the body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set the minimum height to fill the viewport */
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    background: #67B26F;
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);
+    background: linear-gradient(to right, #4ca2cd, #67B26F);
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    width: 15vh;
+    height: 100vh; /* Set the height to 100vh */
+    background-color: #333;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Navigation link styles */
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-top: 3vh;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Icon styles */
+.nav .fas {
+    font-size: 25px;
+    margin-right: 5px; 
+    margin-bottom: 1.5vh; /* Add space between icon and text */
+}
+
+.nav-ul {
+    position: absolute;
+    left: 18px; /* Adjust the x-coordinate as needed */
+    top: 0px; /* Adjust the y-coordinate as needed */
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Apply CSS styles to the student profile card */
+.student-profile .card {
+    border-radius: 10px;
+}
+
+/* Apply CSS styles to the profile image */
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+    
+    
+}
+
+/* Apply CSS styles to the student name */
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Apply CSS styles to student details */
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+    
+}
+
+/* Apply CSS styles to the profile table */
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+}
+
+footer {    
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Add your CSS styles here */
+#imageContainer {
+    max-width: 300px;
+    margin-top: 20px;
+}
+
+#uploadedImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 10px solid #ccc;
+    border-radius: 50%;
+}
+
+
+
+

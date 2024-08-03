@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Page</title>
+    <link rel="stylesheet" href="s.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <div class="nav">
+            <img class="logo" src="logo.jpg" alt="Logo">
+            <a href="shome.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html"><i class="fas fa-user-edit"></i> Profile</a>
+            <a href="achievement.html"><i class="fas fa-file"></i> Achievement</a>
+            <a href="cv-template.html"><i class="fas fa-book"></i><br> C.V. </a>
+            <a href="../public/login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>       
+        </div>
+    </div>
+    
+    <header>
+        <h1>Achievement Page</h1>
+    </header>
+
+    <main>
+        <section class="achievements">
+            <h2>Your Achievements</h2>
+            <ul id="achievements-list">
+                <li>
+                    <img src="achieve.jpg" alt="Achievement 1">
+                    <h3>Achievement 1</h3><br>
+                    <input type="file" accept=".pdf, .doc, .docx" name="achievement_documents">
+                    <button class="delete-achievement">Delete</button>
+                </li>
+            </ul>
+            <button id="add-achievement">Add Achievement</button>
+        </section>
+    
+        <h2>Uploaded Achievements</h2>
+        <ul id="achievementList">
+            <li>
+                <img class="achievement-image" src="achieve.jpg" alt="Achievement 1">
+                Student 1: Achievement 1
+                <button class="printButton" onclick="printAchievement('achievement1')">Print</button>
+                <a href="#" class="viewLink" onclick="viewAchievement('achievement1')">View</a>
+            </li>
+            <li>
+                <img class="achievement-image" src="achieve.jpg" alt="Achievement 2">
+                Student 2: Achievement 2
+                <button class="printButton" onclick="printAchievement('achievement2')">Print</button>
+                <a href="#" class="viewLink" onclick="viewAchievement('achievement2')">View</a>
+            </li>
+            <!-- Add more achievements with Print and View options as needed -->
+        </ul>
+        
+    </main>
+
+    <footer>
+        &copy; 2023 Student Portal
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="../public/logout.js"></script>
+</body>
+</html>

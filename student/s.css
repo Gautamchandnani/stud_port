@@ -1,0 +1,272 @@
+/* Reset some default styles */
+body, h1, h2, h3, ul, p, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 0;
+}
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the body at least 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    width: 10vh;
+    height: 100vh; /* Set the height to 100vh */
+    background-color: #333;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Navigation link styles */
+.nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    margin-top: 3vh;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Icon styles */
+.nav .fas {
+    font-size: 25px;
+    margin-right: 5px; 
+    margin-bottom: 1.5vh; /* Add space between icon and text */
+}
+
+.nav-ul {
+    position: absolute;
+    left: 18px; /* Adjust the x-coordinate as needed */
+    top: 0px; /* Adjust the y-coordinate as needed */
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+.achievement-image {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+/* Style for the achievement section */
+.achievements {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    padding: 1rem;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.achievements h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.achievements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.achievements img {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+.achievements h3 {
+    font-size: 18px;
+}
+
+.achievements p {
+    font-size: 14px;
+    color: #555;
+}
+
+.achievements ul {
+    padding-left: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100vh; /* Set the height to 100vh */
+    margin-top: 0; /* Remove margin-top to align with .nav */
+    flex: 50;
+    width: 150vh;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 60vh; /* Adjust the width for smaller screens */
+        margin-right: 5vh;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 25vh; /* Further adjust the width for extra small screens */
+        max-width: none; /* Remove the maximum width for extra small screens */
+    }
+}
+
+.container h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.col-mid-6 {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Style form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the Add buttons */
+.container2 {
+    text-align: center;
+}
+
+#weAddbutton, #aqAddButton {
+    margin-top: 10px;
+}
+
+/* Style the Generate CV button */
+.container3 {
+    text-align: center;
+    margin-top: 30px;
+}
+/* ... Other CSS styles ... */
+
+.container h3 {
+    margin-bottom: 20px; /* Add space below h3 */
+}
+
+/* ... Other CSS styles ... */
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {    
+    background-color: #333;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Ensure the footer sticks to the bottom */
+}
+
+/* Profile section */
+.profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}

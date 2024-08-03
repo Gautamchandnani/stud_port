@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link rel="stylesheet" href="f.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image:url("cv_img.jpg");
+            background-size: cover; /* Adjust the size as needed */
+            background-repeat: no-repeat;
+        }
+    </style> 
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <div class="nav">
+            <img class="logo" src="logo.jpg" alt="Logo">
+            <a href="fhome.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html"><i class="fas fa-user-edit"></i> Profile</a>
+            <a href="achievement.html"><i class="fas fa-file"></i> Achievement</a>
+            <a href="cv.html"><i class="fas fa-book"></i><br> C.V. </a>
+            <a href="../public/login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>      
+        </div>
+    </div>
+
+    <header>
+        <h1>C.V. Page</h1>
+    </header>
+
+    <div class="container">
+        <h1>Students CV</h1>
+        <form id="cvForm">
+            <div class="form-group">
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Select Achievements:</label>
+                <select id="achievements" name="achievements[]" multiple required>
+                    <option value="Achievement 1">Achievement 1</option>
+                    <option value="Achievement 2">Achievement 2</option>
+                    <option value="Achievement 3">Achievement 3</option>
+                    <!-- Add more achievements here -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="layout">Select Layout:</label>
+                <select id="layout" name="layout" required>
+                    <option value="layout1">Layout 1</option>
+                    <option value="layout2">Layout 2</option>
+                    <!-- Add more layout options here -->
+                </select>
+            </div>
+            <button type="submit">Generate CV</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2023 Student Portal
+    </footer>
+    <script src="../public/logout.js"></script>
+</body>
+</html>

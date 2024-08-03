@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Admin Profile Page </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+<link rel="stylesheet" href="./profile.css">
+<style>
+  body {
+      background-image: url(IMG1.jpg);
+      background-size: cover; /* Adjust the size as needed */
+      background-repeat: no-repeat;
+      
+      
+  }
+</style>
+</head>
+<body>
+
+<div style="text-align: center;">
+    <div class="nav">
+        <img class="logo" src="logo.jpg" alt="Logo">
+        <a href="ahome.html"><i class="fas fa-home"></i> Home</a>
+        <a href="profile.html"><i class="fas fa-user-edit"></i> Profile</a>
+        <a href="add_user.html"><i class="fas fa-user-plus"></i> Create-User</a>
+        <a href="../public/login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>  
+    </div>
+</div>
+
+
+		
+<div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+ 
+            <!-- Ad Here -->
+            
+        </div>
+
+    </div>
+</div>
+
+<header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        <div style="text-align: center;">
+        	<div class="rt-heading">
+            	<h1>Admin Profile Page  </h1>
+            </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+              <div class="Scriptcontent">
+              
+<!-- Student Profile -->
+<div class="student-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <input type="file" id="imageInput" accept="image/*">
+            <div id="imageContainer">
+              <img id="uploadedImage" src="" alt="Uploaded Image">
+            </div>
+            <h3>
+              <input type="text" id="adminName" value="Bhavishka Mulchandani">
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-0">
+              <strong class="pr-1">Admin ID:</strong>
+              <input type="text" id="adminID" value="02">
+            </p>
+            <p class="mb-0">
+              <strong class="pr-1">Date of Joining:</strong>
+              <input type="text" id="joiningDate" value="02-10-2004">
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">Years of Experience</th>
+                <td width="2%">:</td>
+                <td>
+                  <input type="text" id="experienceYear" value="10 Years">
+                </td>
+              </tr>
+              <tr>
+                <th width="30%">Academic Year</th>
+                <td width="2%">:</td>
+                <td>
+                  <input type="text" id="academicYear" value="2023-24">
+                </td>
+              </tr>
+              <tr>
+                <th width="30%">Gender</th>
+                <td width="2%">:</td>
+                <td>
+                  <input type="text" id="studentGender" value="Female">
+                </td>
+              </tr>
+              <tr>
+                <th width="30%">Managing Branch</th>
+                <td width="2%">:</td>
+                <td>
+                  <input type="text" id="ManagingBranch" value="INFT">
+                </td>
+              </tr>
+              
+            </table>
+          </div>
+        </div>
+        <div style="height: 26px"></div>
+        <button id="saveButton">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+           
+    		</div>
+		</div>
+    </div>
+</section>
+     
+
+
+    <!-- Analytics -->
+    <footer>
+        &copy; 2023 Student Portal
+    </footer>
+    <script src="./profile.js"></script>
+	</body>
+</html>

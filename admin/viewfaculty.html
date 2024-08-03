@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculties</title>
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      body {
+          background-image: url(IMG1.jpg);
+          background-size: cover; /* Adjust the size as needed */
+          background-repeat: no-repeat;
+          
+          
+      }
+    </style>
+  </head>
+<body>
+  <div class="nav" >
+    <img class="logo" src="logo.jpg" alt="Logo">
+    <a href="ahome.html"><i class="fas fa-home"></i> Home</a>
+        <a href="profile.html"><i class="fas fa-user-edit"></i> Profile</a>
+        <a href="add_user.html"><i class="fas fa-user-plus"></i> Create-User</a>
+      
+        <a href="../public/login.html" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>     
+
+</div>
+<div class="content">
+  <div class="vertical-line"></div>
+  <div class="home-container">
+      <div class="faculty-data">
+          <h2>Faculty Data</h2>
+          <table id="faculty-table">
+              <!-- Your table header -->
+              <tr>
+                <th>Name</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Delete</th>
+              </tr>
+              
+          </table>
+      </div>
+  </div>
+</div>
+<script>
+  // Function to fetch and display faculty data
+  async function fetchFacultyData() {
+    try {
+      const response = await fetch('/api/faculties');
+      const data = await response.json();
+      const facultyTable = document.getElementById('faculty-table');
+      
+      data.forEach(faculty => {
+        const row = facultyTable.insertRow();
+        row.innerHTML = `
+          <td>${faculty.facultyName}</td>
+          <td>${faculty.facultyLastName}</td>
+          <td>${faculty.facultyEmail}</td>
+          <td>${faculty.facultyDepartment}</td>
+          <td><button onclick="deleteFaculty('${faculty._id}')">Delete</button></td>`;
+      });
+    } catch (error) {
+      console.error('Error fetching faculty data:', error);
+    }
+  }
+
+  // Function to delete an faculty
+  async function deleteFaculty(facultyId) {
+    try {
+      const response = await fetch(`/api/faculties/${facultyId}`, { method: 'DELETE' });
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message);
+        // Refresh the faculty data after successful deletion
+        fetchFacultyData();
+      } else {
+        alert('Error deleting faculty: ' + result.error);
+      }
+    } catch (error) {
+      console.error('Error deleting faculty:', error);
+    }
+  }
+
+  // Call the function to fetch and display faculty data on page load
+  fetchFacultyData();
+</script>
+</body>
+</html>
