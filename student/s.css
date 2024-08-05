@@ -1,12 +1,13 @@
 /* Reset some default styles */
-body, h1, h2, h3, ul, p, label, input, textarea, button {
+body, h1, h3, ul, p, label, input, textarea, button {
     margin: 0;
     padding: 0;
     
 }
 
 header {
-    background-color: #333;
+    /* background-color: #333; */
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -16,16 +17,23 @@ header h1 {
     margin: 0;
 }
 
+h2{
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
 main {
-    max-width: 800px;
-    margin: 20px auto;
+    /* max-width: 800px; */
+    margin: 110px ;
+    border-radius: 10px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    margin-top: 0;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
 }
 button {
     background-color: #007BFF;
@@ -61,9 +69,13 @@ body {
 }
 
 .logo {
-    width: 80px;
-    height: 60px;
-    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+section {
+    margin-bottom: 20px;
 }
 
 /* Navigation link styles */
@@ -112,6 +124,28 @@ button[type="submit"] {
 
 button[type="reset"] {
     background-color: #dc3545;
+}
+
+.course-item, .achievement-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.course-item h3, .achievement-item h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.course-item p, .achievement-item p {
+    margin: 5px 0;
+}
+
+.due-date {
+    color: red;
+    font-weight: bold;
 }
 
 .achievement-image {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
     <style>
         body {
-            background-image: url(lum3n--RBuQ2PK_L8-unsplash.jpg);
+            /* background-image: url(lum3n--RBuQ2PK_L8-unsplash.jpg); */
             background-size: cover; /* Adjust the size as needed */
             background-repeat: no-repeat;
             
@@ -35,18 +35,16 @@
     <main>
         <section class="profile-section">
             <h2>Your Profile</h2>
-            10th Fail
-            <!-- Display student profile information here -->
+            <div id="profile-info">
+                <!-- Display student profile information here -->
+            </div>
         </section>
 
         <section class="courses-section">
             <h2>Your Courses</h2>
-            <!-- List of enrolled courses -->
-            <ul>
-                <li><a href="#">Course 1</a></li>
-                <li><a href="#">Course 2</a></li>
-                <!-- Add more courses as needed -->
-            </ul>
+            <div id="courses-list">
+                <!-- Display enrolled courses here -->
+            </div>
         </section>
 
         <section class="assignments-section">
@@ -61,18 +59,63 @@
 
         <section class="achievements-section">
             <h2>Your Achievements</h2>
-            <!-- List of achievements -->
-            <ul>
-                <li><a href="#">Achievement 1</a></li>
-                <li><a href="#">Achievement 2</a></li>
-                <!-- Add more achievements as needed -->
-            </ul>
+            <div id="achievements-list">
+                <!-- Display achievements here -->
+            </div>
         </section>
     </main>
 
     <footer>
         &copy; 2023 Student Portal
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch and display student profile information
+            fetch('/api/student/profile')
+                .then(response => response.json())
+                .then(data => {
+                    const profileInfo = document.getElementById('profile-info');
+                    profileInfo.innerHTML = `
+                        <p>Name: ${data.name}</p>
+                        <p>Grade: ${data.grade}</p>
+                        <p>Email: ${data.email}</p>
+                    `;
+                });
+
+            // Fetch and display enrolled courses
+            fetch('/api/student/courses')
+                .then(response => response.json())
+                .then(data => {
+                    const coursesList = document.getElementById('courses-list');
+                    data.courses.forEach(course => {
+                        const courseItem = document.createElement('div');
+                        courseItem.className = 'course-item';
+                        courseItem.innerHTML = `
+                            <h3>${course.title}</h3>
+                            <p>${course.description}</p>
+                        `;
+                        coursesList.appendChild(courseItem);
+                    });
+                });
+
+            // Fetch and display achievements
+            fetch('/api/student/achievements')
+                .then(response => response.json())
+                .then(data => {
+                    const achievementsList = document.getElementById('achievements-list');
+                    data.achievements.forEach(achievement => {
+                        const achievementItem = document.createElement('div');
+                        achievementItem.className = 'achievement-item';
+                        achievementItem.innerHTML = `
+                            <h3>${achievement.title}</h3>
+                            <p>${achievement.description}</p>
+                            <p>Date: ${achievement.date}</p>
+                        `;
+                        achievementsList.appendChild(achievementItem);
+                    });
+                });
+        });
+    </script>
     <script src="../public/logout.js"></script>
 </body>
 </html>
